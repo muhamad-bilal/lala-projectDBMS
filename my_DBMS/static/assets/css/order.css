@@ -1,0 +1,144 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #19204c;
+    color: #f0f0f0;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: space-around;
+}
+
+h2 {
+    color: #ffc107;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23333'><polygon points='0 3 8 11 16 3'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 20px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+
+select:focus {
+    outline: 2px solid #ffc107;
+}
+
+
+.restaurant-selection,
+.menu-container,
+.order-section {
+    background-color: #202A65;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 25%;
+    max-width: 800px; 
+    box-sizing: border-box;
+
+
+}
+
+.order-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* #checkout-button {
+    background-color: #ffc107;
+    color: #19204c;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    
+  
+} */
+
+/* CSS Variables - Adjust colors as needed */
+:root {
+    --marigold: #ffc107; 
+    --white: #ffffff;
+    --radius-10: 10px;
+    --transition-1:  background-color 0.3s ease, color 0.3s ease; 
+    --transition-2: 0.25s ease;
+
+}
+
+/* New Button Styles */
+.btn { 
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 12px 27px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #999999;
+    background: #ffc107;
+    border: 3px solid #999999;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+    border-radius: 10px
+}
+
+.btn.btn-border-5::after,
+.btn.btn-border-5::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    transition: .5s;
+}
+
+.btn.btn-border-5::after {
+    top: 0;
+    left: 0;
+    border-top: 3px solid transparent;
+}
+
+.btn.btn-border-5::before {
+    bottom: 0;
+    right: 0;
+    border-bottom: 3px solid transparent;
+}
+
+.btn.btn-border-5:hover {
+    color: #222222;
+}
+
+.btn.btn-border-5:hover::after,
+.btn.btn-border-5:hover::before {
+    width: 100%;
+    height: 100%;
+    border-color: #222222;
+}

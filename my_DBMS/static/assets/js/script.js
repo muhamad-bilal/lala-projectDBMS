@@ -84,3 +84,15 @@ if (revealElements.length > 0) {
 } else {
   console.log("Elements with [data-reveal] not found");
 }
+
+$(document).ready(function() {
+  $('.footer-link').click(function(event) { 
+      event.preventDefault(); 
+
+      var targetPosition = $($(this).attr('href')).offset().top;
+
+      $('html, body').animate({
+          scrollTop: targetPosition
+      }, 500); 
+  });
+});

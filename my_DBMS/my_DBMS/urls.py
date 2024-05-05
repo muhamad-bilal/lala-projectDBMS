@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include 
+from . import view
 
 admin.site.site_header = "My_DBMS Admin"
 admin.site.site_title = "My_DBMS Admin Portal"  
@@ -27,6 +28,9 @@ urlpatterns = [
     path('Menu/', include('home.urls_home')),
     path('contacts/', include('home.urls_home')),
     path('Order_Now/', include('home.urls_home')),
-    path('place_order/', include('home.urls_home'))
+    path('place_order/', include('home.urls_home')),
+    path('restaurant/', view.restaurant, name='restaurant'),
+    path('checkout/', view.checkout, name='checkout'),
+
 
 ]

@@ -1,21 +1,4 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
-
   /**
    * colors
    */
@@ -24,7 +7,7 @@
   --eerie-black: hsl(210, 11%, 15%);
   --light-gray: hsl(0, 0%, 83%);
   --davys-gray: hsl(0, 0%, 30%);
-  --marigold: hsl(39, 96%, 48%);
+  --marigold: #19204c;
   --platinum: hsl(0, 0%, 90%);
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
@@ -445,14 +428,20 @@ body.active {
 .hero { padding-block-start: calc(var(--section-padding) + 5px); }
 
 .hero .container {
-  display: grid;
+  display: flex;
   gap: 80px;
 }
 
-.hero-text { margin-block: 8px 40px; }
+.hero-text { margin-block: 8px 40px;
+text-align: center; }
 
 .hero .shape { display: none; }
 
+.section.hero {
+  display: flex;               /* Enable Flexbox for easy centering */
+  align-items: center;         /* Center vertically within the section */
+  justify-content: center;     /* Center horizontally within the section */
+} 
 
 
 
@@ -522,153 +511,12 @@ body.active {
   margin-block-start: 40px;
 }
 
-
-
-
-
-/*-----------------------------------*\
-  #CTA
-\*-----------------------------------*/
-
-.cta .container {
-  display: grid;
-  gap: 60px;
-}
-
-.cta .section-text { margin-block: 20px 30px; }
-
-
-
-
-
-/*-----------------------------------*\
-  #STATS
-\*-----------------------------------*/
-
-.stats .section-title { margin-block-end: 0; }
-
-.stats-item {
-  background-color: var(--white);
-  padding: 40px;
-  box-shadow: var(--shadow-1);
-  border-radius: var(--radius-10);
-  text-align: center;
-}
-
-.stats-item .span {
-  color: var(--marigold);
-  font-size: var(--fs-1);
-  font-weight: var(--fw-700);
-  line-height: 1;
-}
-
-
-
-
-
-/*-----------------------------------*\
-  #TESTIMONIALS
-\*-----------------------------------*/
-
-.testi .container {
-  display: grid;
-  gap: 80px;
-}
-
-.testi-text {
-  font-size: var(--fs-10);
-  margin-block: 25px 20px;
-}
-
-.testi .wrapper {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.testi .author-title {
-  color: var(--jet);
-  font-size: var(--fs-10);
-  font-weight: var(--fw-500);
-  margin-block-end: 5px;
-}
-
-
-
-
-
-/*-----------------------------------*\
-  #PARTNERSHIP
-\*-----------------------------------*/
-
-.partnership {
-  background-color: var(--jet);
-  overflow-x: hidden;
-}
-
-.partnership .section-title {
-  text-align: center;
-  color: var(--white);
-  margin-block-end: 50px;
-}
-
-.partnership-card { position: relative; }
-
-.partnership-card .card-banner {
-  outline: 7px solid var(--marigold);
-  border-radius: var(--radius-20);
-  margin: 7px;
-}
-
-.partnership-card .card-title {
-  color: var(--white);
-  margin-block-end: 10px;
-}
-
-.partnership-card .card-content {
-  position: absolute;
-  bottom: -20px;
-  left: 20px;
-}
-
-
-
-
-
-/*-----------------------------------*\
-  #NEWSLETTER
-\*-----------------------------------*/
-
-.newsletter .container {
-  display: grid;
-  gap: 40px;
-}
-
-.newsletter .section-title { margin-block-end: 30px; }
-
-.newsletter .input-field {
-  background-color: var(--white);
-  padding: 15px 30px;
-  border-radius: var(--radius-10);
-  box-shadow: var(--shadow-2);
-  margin-block-end: 20px;
-  outline: none;
-}
-
-.newsletter .input-field:focus { box-shadow: inset 0 0 0 2px var(--marigold); }
-
-.newsletter .btn ion-icon { --ionicon-stroke-width: 50px; }
-
-
-
-
-
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
 
 .footer {
-  background-color: var(--jet);
+  background-color: var(--marigold);
   color: var(--light-gray);
 }
 
@@ -814,34 +662,7 @@ body.active {
   }
 
 
-
-  /**
-   * STATS
-   */
-
-  .stats-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-
-
-
-  /**
-   * PARTNERSHIP
-   */
-
-  .partnership-card .card-content { left: 40px; }
-
-  .partnership-card .card-title { --fs-8: 3.5rem; }
-
 }
-
-
-
-
-
 /**
  * responsive for large than 768px screen
  */
@@ -919,8 +740,9 @@ body.active {
    */
 
   .hero .container {
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 30px;
   }
 
@@ -946,19 +768,6 @@ body.active {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
-
-
-
-  /**
-   * CTA, TESTIMONIALS, NEWSLETTER
-   */
-  
-  :is(.cta, .testi, .newsletter) .container {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-  }
-
-
 
   /**
    * FOOTER
@@ -1043,17 +852,5 @@ body.active {
     border-radius: var(--radius-10);
   }
 
-
-
-  /**
-   * STATS
-   */
-
-  .stats .grid-list {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-
-  .stats-item .span { --fs-1: 4.8rem; }
 
 }

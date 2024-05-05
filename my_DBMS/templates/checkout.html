@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - LaLa</title>
+    <link rel="stylesheet" href="{% static 'assets/css/checkout.css' %}"> 
+</head>
+<body>
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+
+
+        <section class="customer-info">
+            <h2>Customer Information</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="phone-number">Phone Number:</label>
+                    <input type="tel" id="phone-number" name="phone-number" required>
+                </div>
+                <div class="form-group">
+                    <label for="hostel-number">Hostel Number:</label>
+                    <select id="hostel-number" name="hostel-number">
+                        <option value="">Select Hostel</option>
+                        <option value="hostel-1">Hostel 1</option>
+                        <option value="hostel-2">Hostel 2</option>
+                        <option value="hostel-3">Hostel 3</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Place Order</button>                
+            </form>
+        </section>
+    </div>
+
+    <script src="{% static 'assets/js/checkout.js' %}"></script> 
+</body>
+</html>

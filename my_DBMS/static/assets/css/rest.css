@@ -1,0 +1,50 @@
+/* Updated order_now_css.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #19204c ;
+}
+
+.container {
+    max-width: 800px;
+    margin: 100px auto; /* Adjusted margin to create space between header and content */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.7); 
+
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+  
+  /* Restaurant List Styles */
+  .restaurant-list {
+    list-style: none; /* Remove default markers */
+    padding: 30px;
+  }
+  
+  .restaurant-list li {
+    background-color: #f5f5f5; /* Light background for separation */
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 5px;  /* Slightly rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .restaurant-list li a {
+    text-decoration: none;
+    color: #333; /* Dark text color */
+    font-weight: bold;
+    display: block; /* Makes the link fill the entire list item */
+  }
+  
+  .restaurant-list li a:hover {
+    color: #007bff; /* Example hover color - change as needed */
+  } 
+  
