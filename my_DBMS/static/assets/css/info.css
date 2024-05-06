@@ -1,0 +1,112 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #19204c;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+    min-height: 100vh;
+}
+h2{
+    color: #876602;
+    margin-bottom: 15px;
+}
+
+/* Container */
+.checkout-wrapper {
+    width: 80%;
+    max-width: 50%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    color: #876602;
+    margin-bottom: 15px;
+}
+
+/* Content */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 12px 27px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #999999;
+    background: #876602;
+    border: 3px solid #999999;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+    border-radius: 10px;
+    
+}
+
+.btn.btn-border-5::after,
+.btn.btn-border-5::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    transition: .5s;
+}
+
+.btn.btn-border-5::after {
+    top: 0;
+    left: 0;
+    border-top: 3px solid transparent;
+}
+
+.btn.btn-border-5::before {
+    bottom: 0;
+    right: 0;
+    border-bottom: 3px solid transparent;
+}
+
+.btn.btn-border-5:hover {
+    color: #222222;
+}
+
+.btn.btn-border-5:hover::after,
+.btn.btn-border-5:hover::before {
+    width: 100%;
+    height: 100%;
+    border-color: #222222;
+}
+
+.customer-info { 
+    text-align: center;  
+}

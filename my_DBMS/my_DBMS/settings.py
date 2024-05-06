@@ -138,3 +138,4 @@ STATICFILES_DIRS = [
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = '/path/to/your/static/root' 
