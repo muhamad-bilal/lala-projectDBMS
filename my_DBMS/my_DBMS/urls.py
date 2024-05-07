@@ -31,6 +31,8 @@ urlpatterns = [
     path('place_order/', include('home.urls_home')),
     path('restaurant/', view.restaurant, name='restaurant'),
     path('checkout/', view.checkout, name='checkout'),
+    path('orderconfrimed/', view.order, name='orderconfrimed'),
+
 
 
 ]

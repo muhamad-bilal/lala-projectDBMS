@@ -8,3 +8,6 @@ def restaurant(request):
 def checkout(request):
     return render(request, 'checkout.html')
 
+def order(request):
+    return render(request, 'orderconfrimed.html')
+
